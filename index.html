@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-type="software" data-radius="sharp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Dennis Damien: backend engineer building event-driven Java, Spring Boot and Kafka systems.">
+<meta name="page-type" content="software"><meta name="site-kind" content="software">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#1c1c1c" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<title>Dennis Damien — Backend Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1c1c1c;--bg2:#202020;--card:#232323;--ink:#fafafa;--mute:#9a9a9a;--line:#2e2e2e;--g:#3ecf8e;--gd:#24b47e;--onG:#171717;--glow:rgba(62,207,142,.12);
+--sans:Inter,'Helvetica Neue',Helvetica,Arial,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#fff;--bg2:#fafafa;--card:#fff;--ink:#171717;--mute:#707070;--line:#dfdfdf;--glow:rgba(62,207,142,.18)}}
+:root[data-theme="light"]{--bg:#fff;--bg2:#fafafa;--card:#fff;--ink:#171717;--mute:#707070;--line:#dfdfdf;--glow:rgba(62,207,142,.18)}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.w{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .w{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-weight:600;display:flex;align-items:center;gap:8px}.logo i{width:10px;height:10px;border-radius:50%;background:var(--g);box-shadow:0 0 12px var(--g)}
+nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:14px;color:var(--mute)}nav ul a:hover{color:var(--ink)}
+@media(max-width:640px){nav ul{display:none}}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:6px;font:500 14px/1 var(--sans);border:1px solid var(--line);color:var(--ink);background:transparent}
+.btn.p{background:var(--g);border-color:var(--g);color:var(--onG)}.btn.p:hover{background:var(--gd)}.btn:not(.p):hover{border-color:var(--mute)}
+.hero{padding:96px 0 72px;background:radial-gradient(700px 300px at 50% 0,var(--glow),transparent)}
+.pill{display:inline-flex;gap:8px;align-items:center;font:12px var(--mono);color:var(--g);border:1px solid color-mix(in srgb,var(--g) 40%,transparent);padding:4px 12px;border-radius:99px}
+h1{font-size:clamp(40px,7vw,64px);line-height:1.08;letter-spacing:-.03em;font-weight:500;margin:20px 0}
+h1 em{font-style:normal;color:var(--g)}
+.lead{font-size:18px;color:var(--mute);max-width:640px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:56px}
+.stats div{background:var(--bg2);padding:22px}.stats b{display:block;font-size:28px;font-weight:500;letter-spacing:-.02em}.stats span{font-size:13px;color:var(--mute)}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+section{padding:72px 0;border-top:1px solid var(--line)}
+.eyebrow{font:12px var(--mono);color:var(--g);text-transform:uppercase;letter-spacing:.1em}
+h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.025em;font-weight:500;margin:10px 0 12px;line-height:1.15}
+.sub{color:var(--mute);max-width:620px;margin:0 0 36px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px}
+.diagram{overflow-x:auto}.diagram svg{min-width:760px;width:100%;height:auto;display:block}
+.diagram text{font-family:var(--mono);font-size:12px;fill:var(--ink)}.diagram .m{fill:var(--mute)}
+.node{fill:var(--bg2);stroke:var(--line);stroke-width:1.2}.node.g{stroke:var(--g)}
+.flow{stroke:var(--g);stroke-width:1.5;fill:none;stroke-dasharray:5 6;animation:d 1s linear infinite}
+@keyframes d{to{stroke-dashoffset:-11}}
+@media(prefers-reduced-motion:reduce){.flow{animation:none}}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
+.steps div{font-size:14px;color:var(--mute)}.steps b{display:block;color:var(--ink);font-weight:500;margin-bottom:4px}.steps i{font:12px var(--mono);color:var(--g);font-style:normal}
+@media(max-width:760px){.steps{grid-template-columns:1fr 1fr}}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tag{font:12px var(--mono);padding:3px 10px;border-radius:99px;background:var(--bg2);border:1px solid var(--line);color:var(--mute)}.tag.g{color:var(--onG);background:var(--g);border-color:var(--g)}
+.job{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:28px 0;border-bottom:1px solid var(--line)}.job:last-child{border:0}
+.job small{color:var(--mute);font:13px var(--mono)}.job h3{margin:0 0 2px;font-size:20px;font-weight:500}.job .co{color:var(--g);font-size:14px}
+.job ul{margin:14px 0 0;padding-left:18px;color:var(--mute)}.job li{margin:6px 0}
+@media(max-width:700px){.job{grid-template-columns:1fr;gap:8px}}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.grid .card{padding:22px}.grid h4{margin:0 0 12px;font-size:15px;font-weight:500}.grid .tags{margin:0}
+.contact{text-align:center}.contact .lead{margin:0 auto}.contact .cta{justify-content:center}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--mute);font-size:13px;text-align:center}
+html{color-scheme:dark}
+@media(prefers-color-scheme:light){html:not([data-theme="dark"]){color-scheme:light}}
+body{text-wrap:pretty}h1,h2,h3{text-wrap:balance}
+.stats b{font-variant-numeric:tabular-nums}
+a,button{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.skip{position:absolute;left:16px;top:-60px;z-index:20;background:var(--g);color:var(--onG);padding:10px 16px;border-radius:6px;font-weight:500;transition:top .15s}.skip:focus-visible{top:12px}
+:focus-visible{outline:2px solid var(--g);outline-offset:3px;border-radius:4px}
+.hero{min-height:calc(100svh - 60px);display:flex;align-items:center;padding:56px 0}.hero .w{width:100%}
+.btn{transition:background-color .15s,border-color .15s,transform .15s}
+.btn:hover{transform:translateY(-1px)}.btn:active{transform:translateY(0) scale(.98)}
+.card{border-radius:8px;transition:transform .2s,border-color .2s}
+.grid .card:hover{transform:translateY(-2px);border-color:var(--g)}
+nav ul a{position:relative;transition:color .15s}
+nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--g);transform:scaleX(0);transform-origin:left;transition:transform .2s}
+nav ul a:hover::after{transform:scaleX(1)}
+.w>.steps{margin:0 0 24px}.w>.tags{margin:0 0 20px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to Content</a>
+<nav aria-label="Primary"><div class="w"><a class="logo" href="#top" translate="no"><i aria-hidden="true"></i>dennis.damien</a>
+<ul><li><a href="#how">How I build</a></li><li><a href="#work">Experience</a></li><li><a href="#project">Project</a></li><li><a href="#stack">Stack</a></li></ul>
+<a class="btn p" href="#contact">Contact Dennis</a></div></nav>
+
+<main id="main">
+<header class="hero" id="top"><div class="w">
+<span class="pill"><span aria-hidden="true">●</span> Open to Backend Roles</span>
+<h1>Backend engineer for teams building <em>event-driven</em> Java systems.</h1>
+<p class="lead">3+ years shipping Java and Spring Boot microservices, Kafka pipelines and REST APIs. I write the code, test it, and stay on the hook when it runs in production.</p>
+<div class="cta"><a class="btn p" href="mailto:dennisdamien01@gmail.com">Email Dennis</a><a class="btn" href="https://github.com/dennisdamien" rel="noopener">GitHub Profile</a><a class="btn" href="https://www.linkedin.com/in/dennisdamien/" rel="noopener">LinkedIn Profile</a><a class="btn" href="https://leetcode.com/DennisDamien/" rel="noopener">LeetCode Profile</a></div>
+<div class="stats"><div><b>3+ yrs</b><span>Professional experience</span></div><div><b>Java 8/17</b><span>Spring Boot, JPA, Security</span></div><div><b>Kafka</b><span>Async, event-driven design</span></div><div><b>Prod</b><span>Support &amp; root-cause analysis</span></div></div>
+</div></header>
+
+<section id="how"><div class="w">
+<span class="eyebrow">How I build</span>
+<h2>A Request, Followed Through the System</h2>
+<p class="sub">The shape of most backends I’ve built: fast synchronous edge, durable asynchronous core.</p>
+<div class="steps"><div><i>01</i><b>Accept</b>Validate and authenticate, then return fast.</div><div><i>02</i><b>Publish</b>Hand work to Kafka so spikes don’t block users.</div><div><i>03</i><b>Process</b>Concurrent consumers scale out horizontally.</div><div><i>04</i><b>Persist</b>Postgres for truth, Redis for speed.</div></div>
+<div class="card diagram">
+<svg viewBox="0 0 860 230" role="img" aria-label="Architecture: client to REST API to Kafka to consumers to PostgreSQL and Redis">
+<rect class="node" x="10" y="85" width="110" height="60" rx="8"/><text x="65" y="120" text-anchor="middle">Client</text>
+<rect class="node g" x="190" y="85" width="140" height="60" rx="8"/><text x="260" y="112" text-anchor="middle">Spring Boot</text><text class="m" x="260" y="130" text-anchor="middle">REST · Security</text>
+<rect class="node g" x="400" y="85" width="120" height="60" rx="8"/><text x="460" y="112" text-anchor="middle">Kafka</text><text class="m" x="460" y="130" text-anchor="middle">topics</text>
+<rect class="node" x="590" y="20" width="130" height="56" rx="8"/><text x="655" y="53" text-anchor="middle">Consumer A</text>
+<rect class="node" x="590" y="154" width="130" height="56" rx="8"/><text x="655" y="187" text-anchor="middle">Consumer B</text>
+<rect class="node" x="760" y="20" width="92" height="56" rx="8"/><text x="806" y="53" text-anchor="middle">Postgres</text>
+<rect class="node" x="760" y="154" width="92" height="56" rx="8"/><text x="806" y="187" text-anchor="middle">Redis</text>
+<path class="flow" d="M120 115H190"/><path class="flow" d="M330 115H400"/><path class="flow" d="M520 105L590 55"/><path class="flow" d="M520 125L590 180"/><path class="flow" d="M720 48H760"/><path class="flow" d="M720 182H760"/>
+</svg>
+</div></div></section>
+
+<section id="work"><div class="w">
+<span class="eyebrow">Experience</span><h2>Where I’ve Shipped</h2><p class="sub">Two backend roles, both in production-facing teams.</p>
+<div class="job"><div><small>Feb 2025 – May 2026</small></div><div><h3>Software Engineer</h3><div class="co">Radiantwork Technology Services</div>
+<ul><li>Built Spring Boot microservices and REST APIs for an enterprise client on Kafka, PostgreSQL and Redis.</li><li>Diagnosed production issues, ran root-cause analysis and shipped long-term fixes.</li><li>Wrote JUnit and Mockito tests; contributed to CI/CD with Docker and GitHub Actions.</li><li>Reviewed code, mentored junior developers, and helped shape schema and system design.</li></ul></div></div>
+<div class="job"><div><small>Apr 2023 – Jan 2025</small></div><div><h3>Software Engineer</h3><div class="co">LiveLocal E-Comm Private Ltd</div>
+<ul><li>Developed Spring Boot microservices powering customer-facing apps and business workflows.</li><li>Built Kafka-based asynchronous services for scalable inter-app communication.</li><li>Designed inventory and workflow-automation modules; optimized SQL and resolved production issues.</li></ul></div></div>
+</div></section>
+
+<section id="project"><div class="w">
+<span class="eyebrow">Featured project</span><h2>WhatsApp Bot Flow Platform</h2>
+<p class="sub">An event-driven distributed system I designed and built solo, from system design to deployment.</p>
+<div class="tags"><span class="tag g">Spring Boot</span><span class="tag g">Kafka</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">WebSockets</span><span class="tag">Meta WhatsApp Business API</span></div>
+<div class="steps"><div><i>Secure</i><b>Webhooks</b>Signed Meta callbacks integrated safely.</div><div><i>Scale</i><b>Concurrent Consumers</b>High-throughput async processing.</div><div><i>Live</i><b>WebSockets</b>Real-time interaction updates.</div><div><i>Tune</i><b>Optimized</b>Kafka, SQL and caching tuned for latency.</div></div>
+<div class="card diagram">
+<svg viewBox="0 0 860 190" role="img" aria-label="WhatsApp message flow through webhook, Kafka, flow engine, and back via the Business API">
+<rect class="node" x="10" y="65" width="110" height="60" rx="8"/><text x="65" y="100" text-anchor="middle">WhatsApp</text>
+<rect class="node g" x="180" y="65" width="130" height="60" rx="8"/><text x="245" y="92" text-anchor="middle">Webhook</text><text class="m" x="245" y="110" text-anchor="middle">verified</text>
+<rect class="node g" x="370" y="65" width="110" height="60" rx="8"/><text x="425" y="100" text-anchor="middle">Kafka</text>
+<rect class="node g" x="540" y="65" width="140" height="60" rx="8"/><text x="610" y="92" text-anchor="middle">Flow engine</text><text class="m" x="610" y="110" text-anchor="middle">Redis · Postgres</text>
+<rect class="node" x="740" y="65" width="110" height="60" rx="8"/><text x="795" y="92" text-anchor="middle">Reply</text><text class="m" x="795" y="110" text-anchor="middle">+ WebSocket</text>
+<path class="flow" d="M120 95H180"/><path class="flow" d="M310 95H370"/><path class="flow" d="M480 95H540"/><path class="flow" d="M680 95H740"/>
+</svg>
+</div></div></section>
+
+<section id="stack"><div class="w">
+<span class="eyebrow">Stack</span><h2>Tools I Work With</h2><p class="sub">Including AI-assisted development with Claude, Cursor, ChatGPT and Antigravity.</p>
+<div class="grid">
+<div class="card"><h4>Languages &amp; Frameworks</h4><div class="tags"><span class="tag">Java 8/17</span><span class="tag">Streams</span><span class="tag">SQL</span><span class="tag">Spring Boot</span><span class="tag">JPA</span><span class="tag">Security</span><span class="tag">Hibernate</span></div></div>
+<div class="card"><h4>Architecture</h4><div class="tags"><span class="tag">REST APIs</span><span class="tag">Microservices</span><span class="tag">Distributed systems</span><span class="tag">Webhooks</span><span class="tag">WebSockets</span></div></div>
+<div class="card"><h4>Data &amp; Messaging</h4><div class="tags"><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Redis</span><span class="tag">MongoDB</span><span class="tag">Kafka</span><span class="tag">Schema design</span></div></div>
+<div class="card"><h4>Testing &amp; Debugging</h4><div class="tags"><span class="tag">JUnit</span><span class="tag">Mockito</span><span class="tag">Integration tests</span><span class="tag">Postman</span><span class="tag">Root-cause analysis</span></div></div>
+<div class="card"><h4>DevOps</h4><div class="tags"><span class="tag">Git</span><span class="tag">GitHub Actions</span><span class="tag">Docker</span><span class="tag">Kubernetes (basics)</span><span class="tag">Azure (basics)</span><span class="tag">Linux</span></div></div>
+<div class="card"><h4>Education</h4><p style="margin:0;color:var(--mute);font-size:14px">B.Tech, Information Technology<br>College of Engineering Perumon<br><span style="font-family:var(--mono);font-size:12px">2018 – 2022</span></p></div>
+</div></div></section>
+
+<section id="contact" class="contact"><div class="w">
+<span class="eyebrow">Contact</span><h2>Let’s Build Something Reliable</h2>
+<p class="lead">Open to backend engineering roles. The quickest way to reach me is email.</p>
+<div class="cta"><a class="btn p" href="mailto:dennisdamien01@gmail.com">dennisdamien01@gmail.com</a><a class="btn" href="tel:+917356987631">+91 73569 87631</a></div>
+</div></section>
+</main>
+<footer><div class="w">© Dennis Damien · Kerala, India</div></footer>
+</body>
+</html>
